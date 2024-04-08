@@ -48,7 +48,7 @@ def get_user_data():
 
     result=load_model.predict([[Age,RestingBP,Cholesterol,MaxHR,Oldpeak]])
     
-    return f"result : {target[result[0]]}"
+    return render_template("result.html", result=target[result[0]])
 
 if __name__=="__main__":
     app.run(debug=True)
